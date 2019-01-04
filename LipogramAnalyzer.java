@@ -31,17 +31,26 @@ public class LipogramAnalyzer {
 		
 		String nextRow = text.substring(0,start) + "\n";
 		
-	
-		return nextRow;
+			return nextRow;
 		
 	}
 	
 	
 	
-	private int replacer(String text2)
+	private String extract(int pos)		// this method searches left and right trying to locate spaces
 	{
-		return 0;
+		int pos0 = pos - 1, pos1 = pos + 1;
 		
+		while(pos0 >= && Character.isLetter(text.charAt(pos0))
+		{
+			pos--;
+		}
+		      
+		while(pos1 < text.length() && Character.isLetter(text.charAt(pos1))
+		{
+		      pos++;
+	        }
+		      return text.substring(pos0 - 1, pos1);
 	}
 	
 }
