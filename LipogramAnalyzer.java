@@ -39,9 +39,9 @@ public class LipogramAnalyzer {
 	
 	private String extract(int pos)		// this method searches left and right trying to locate spaces
 	{
-		int pos0 = pos - 1, pos1 = pos + 1;
+		int pos0 = pos - 1, pos1 = pos + 1;	
 		
-		while(pos0 >= && Character.isLetter(text.charAt(pos0))
+		while(pos0 >= 0 && Character.isLetter(text.charAt(pos0))
 		{
 			pos--;
 		}
