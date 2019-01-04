@@ -25,13 +25,13 @@ public class LipogramAnalyzer {
 	{
 		String c = text.replace('#', 'e');
 		text = c;
-		
+		/*
 		int start = text.indexOf(" ");
 		int end = text.lastIndexOf(" ");
-		
 		String nextRow = text.substring(0,start) + "\n";
-		
-			return nextRow;
+		return nextRow;
+		*/
+		extract(0);
 		
 	}
 	
