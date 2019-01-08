@@ -14,7 +14,7 @@ public class LipogramAnalyzer {
 	{
 		// int f = text.indexOf('e');
 		// text = text.substring(0, 'e') + text.substring('e' + text.length());
-		 String c = text.replace('e', '#'); // or just do (letter, '#');
+		 String c = text.replace(letter, '#'); // or just do (letter, '#');
 		 text = c;
 		 
 		return text;
@@ -23,20 +23,31 @@ public class LipogramAnalyzer {
 	
 	public String allWordsWith(char letter)
 	{
-		String c = text.replace('#', 'e');
-		text = c;
-		/*
+		mark(letter);
+		String s = "";
+		/*String a = text.replace('#', 'e');
+		text = a;*/
 		int start = text.indexOf(" ");
 		int end = text.lastIndexOf(" ");
+		
+		for(int i = 0; i < text.length()-1; i++)
+		{
+			String nextRow = text.substring(0,start) + "\n";
+		//	return nextRow;
+			s = nextRow;
+		}
+	 
+		String a = text.replace('#', 'e');
+		text = a;
+		
+		return s;
+		
+		/*int start = text.indexOf(" ");
+		int end = text.lastIndexOf(" ");
 		String nextRow = text.substring(0,start) + "\n";
-		return nextRow;
-		*/
-		extract();
+		return nextRow; */
 		
-		
-		
-		return c;
-		
+	
 	}
 	
 	
