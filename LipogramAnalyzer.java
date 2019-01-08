@@ -31,7 +31,11 @@ public class LipogramAnalyzer {
 		String nextRow = text.substring(0,start) + "\n";
 		return nextRow;
 		*/
-		extract(0);
+		extract();
+		
+		
+		
+		return c;
 		
 	}
 	
@@ -41,15 +45,15 @@ public class LipogramAnalyzer {
 	{
 		int pos0 = pos - 1, pos1 = pos + 1;	
 		
-		while(pos0 >= 0 && Character.isLetter(text.charAt(pos0))
+		while(pos0 >= 0 && Character.isLetter(text.charAt(pos0)))	// returns true if the character is a letter; false otherwise.
 		{
-			pos--;
+			pos--;	//	so if it's not a letter move left // all this does it look for a white space so that it can cut it and seperate the words
 		}
 		      
-		while(pos1 < text.length() && Character.isLetter(text.charAt(pos1))
+		while(pos1 < text.length() && Character.isLetter(text.charAt(pos1)))	// returns true if the character is a letter, false otherwise. passes the paremater char
 		{
-		      pos++;
-	        }
+		      pos++;	// so if it is a letter move to the right
+	    }
 		      return text.substring(pos0 - 1, pos1);
 	}
 	
