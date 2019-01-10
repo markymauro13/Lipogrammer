@@ -24,21 +24,23 @@ public class LipogramAnalyzer {
 	public String allWordsWith(char letter)
 	{
 		mark(letter);
-		String s = "";
-		/*String a = text.replace('#', 'e');
-		text = a;*/
+		String s = " ";
+		String a = text.replace('#', 'e');
+		text = a;
+		
 		int start = text.indexOf(" ");
 		int end = text.lastIndexOf(" ");
 		
 		for(int i = 0; i < text.length()-1; i++)
 		{
-			String nextRow = text.substring(0,start) + "\n";
-		//	return nextRow;
+			String nextRow = text.substring(0,start) + "\n" + text.trim() + text.substring( text.indexOf(" ") );
+		
+			//	return nextRow;
 			s = nextRow;
 		}
 	 
-		String a = text.replace('#', 'e');
-		text = a;
+		//String a = text.replace('#', 'e');
+		//text = a;
 		
 		return s;
 		
