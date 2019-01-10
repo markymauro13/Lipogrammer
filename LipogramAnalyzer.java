@@ -33,7 +33,7 @@ public class LipogramAnalyzer {
 		
 		for(int i = 0; i < text.length()-1; i++)
 		{
-			String nextRow = text.substring(0,start) + "\n" + text.trim() + text.substring( text.indexOf(" ") );
+			String nextRow = text.substring(0,start) + "\n" + text.substring( text.indexOf(" ") ) + text.trim() ;
 		
 			//	return nextRow;
 			s = nextRow;
